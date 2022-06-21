@@ -1,0 +1,103 @@
+<h2 align="center">Reactive Forms</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="">
+      mobilenumber:
+      <input formControlName="mobilenumber" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      firstname:
+      <input formControlName="firstname" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      middlename: <br />
+      <input formControlName="middlename" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      lastname: <br />
+      <input formControlName="lastname" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      pan: <br />
+      <input formControlName="pan" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      fathername: <br />
+      <input formControlName="fathername" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      dob: <br />
+      <input formControlName="dob" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      email: <br />
+      <input formControlName="emailid" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      gender: <br />
+      <input formControlName="gender" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      pincode: <br />
+      <input formControlName="pincode" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      city: <br />
+      <input formControlName="city" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      state: <br />
+      <input formControlName="state" type="text" />
+    </label>
+  </div>
+
+  <button align="center">Submit</button>
+
+  <!-- <ul *ngFor="let property of responseApi">
+    <li>{{ property }}</li>
+  </ul> -->
+
+  <h1
+    *ngIf="
+      responseApi.firstname !== undefined && responseApi.firstname !== null
+    "
+  ></h1>
+  <h3>{{ resultString }}</h3>
+  <h4>leadid = {{ responseApi.leadid }}</h4>
+  <h4>webtopid = {{ responseApi.webtopid }}</h4>
+  <h4>appid = {{ responseApi.appid }}</h4>
+  <h4>firstname = {{ responseApi.firstname }}</h4>
+</form>
